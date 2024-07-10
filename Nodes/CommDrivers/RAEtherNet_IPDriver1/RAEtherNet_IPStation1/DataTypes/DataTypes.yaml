@@ -1,0 +1,110 @@
+Name: DataTypes
+Type: FolderType
+Children:
+- Class: DataType
+  Name: UDT_M
+  Id: g=e103e7532a7d064c1da1e2e6142562ad
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_M",
+    "DataType": {
+     "IdType": 2,
+     "Id": "e103e7532a7d064c1da1e2e6142562ad",
+     "Namespace": 10
+    },
+    "Fields": [{
+      "Name": "cmd_MAINT_MODE",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "cmd_OFF_MODE",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "sts_RUNNING_AUTO",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "sts_RUNNING_HAND",
+      "DataType": {
+       "Id": 1
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_M"}
+  Children:
+  - Name: ns=0;Default Binary
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: UDT_Device
+  Id: g=266f216cad781b5825c43f953c191049
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_Device",
+    "DataType": {
+     "IdType": 2,
+     "Id": "266f216cad781b5825c43f953c191049",
+     "Namespace": 10
+    },
+    "Fields": [{
+      "Name": "A",
+      "DataType": {
+       "IdType": 2,
+       "Id": "9724f20c2a7baa8c2c3705157c2c0f96",
+       "Namespace": 10
+      }
+     },{
+      "Name": "M",
+      "DataType": {
+       "IdType": 2,
+       "Id": "e103e7532a7d064c1da1e2e6142562ad",
+       "Namespace": 10
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_Device"}
+  Children:
+  - Name: ns=0;Default Binary
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: UDT_A
+  Id: g=9724f20c2a7baa8c2c3705157c2c0f96
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_A",
+    "DataType": {
+     "IdType": 2,
+     "Id": "9724f20c2a7baa8c2c3705157c2c0f96",
+     "Namespace": 10
+    },
+    "Fields": [{
+      "Name": "sts_ALARM",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "sts_STOPLATCH",
+      "DataType": {
+       "Id": 1
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_A"}
+  Children:
+  - Name: ns=0;Default Binary
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding

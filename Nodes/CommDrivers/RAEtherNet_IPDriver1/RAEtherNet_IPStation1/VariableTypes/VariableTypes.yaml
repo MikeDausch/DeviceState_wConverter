@@ -1,0 +1,125 @@
+Name: VariableTypes
+Type: FolderType
+Children:
+- Name: UDT_M
+  Id: g=36896eeb85c9e1519e92f14687082e3d
+  Supertype: TagStructure
+  DataType: UDT_M
+  ValueRank: Any
+  Children:
+  - Name: cmd_MAINT_MODE
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "cmd_MAINT_MODE"
+  - Name: cmd_OFF_MODE
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "cmd_OFF_MODE"
+  - Name: sts_RUNNING_AUTO
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "sts_RUNNING_AUTO"
+  - Name: sts_RUNNING_HAND
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "sts_RUNNING_HAND"
+- Name: UDT_Device
+  Id: g=b6cb4c998922074f2b7288c48a697995
+  Supertype: TagStructure
+  DataType: UDT_Device
+  ValueRank: Any
+  Children:
+  - Name: A
+    Type: UDT_A
+    DataType: UDT_A
+    Children:
+    - Name: sts_ALARM
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "sts_ALARM"
+    - Name: sts_STOPLATCH
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "sts_STOPLATCH"
+  - Name: M
+    Type: UDT_M
+    DataType: UDT_M
+    Children:
+    - Name: cmd_MAINT_MODE
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "cmd_MAINT_MODE"
+    - Name: cmd_OFF_MODE
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "cmd_OFF_MODE"
+    - Name: sts_RUNNING_AUTO
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "sts_RUNNING_AUTO"
+    - Name: sts_RUNNING_HAND
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "sts_RUNNING_HAND"
+- Name: UDT_A
+  Id: g=22b6e5b2ca727d04edd5881269a719a5
+  Supertype: TagStructure
+  DataType: UDT_A
+  ValueRank: Any
+  Children:
+  - Name: sts_ALARM
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "sts_ALARM"
+  - Name: sts_STOPLATCH
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "sts_STOPLATCH"

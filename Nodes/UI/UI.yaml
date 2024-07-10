@@ -1,0 +1,2549 @@
+Name: UI
+Type: UICategoryFolder
+Children:
+- Name: DefaultStyleSheet
+  Id: g=8da2b5865c73184b748c69f73d34bedf
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle
+- Name: NativePresentationEngine
+  Type: NativePresentationEngine
+  ReferenceType: HasOrderedComponent
+  Children:
+  - Name: EnableVirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/DeviceState_wConverter/UI/MainWindow"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/DeviceState_wConverter/UI/DefaultStyleSheet"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Users/Anonymous"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+  - Name: Sessions
+    Type: BaseObjectType
+- Name: MainWindow
+  Id: g=01a7e8933afd7c95fe894b0859308138
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1280.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 800.0
+  - Name: Caption
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/DeviceState_wConverter@BrowseName"
+  - Name: HorizontalLayout1
+    Type: RowLayout
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalLayout1
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Devices"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 200.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+        - Name: FontSize
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 44.0
+        - Name: TextHorizontalAlignment
+          Type: BaseVariableType
+          DataType: TextHorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: TextVerticalAlignment
+          Type: BaseVariableType
+          DataType: TextVerticalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+      - Name: Device_Obj1
+        Type: Device_Obj
+        Children:
+        - Name: BG
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DeviceStatusColor1
+              Type: DeviceStatusColor
+              Children:
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#d3d3d3"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff34b0"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#18ff13"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ffff00"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair7
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 7
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair8
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 8
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair9
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 9
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair10
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 10
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair11
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 11
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Device_Status"
+              - Name: System_Application_Blink
+                Type: Alias
+                DataType: NodeId
+                Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Objects/DeviceState_wConverter/System/System/Application"
+        - Name: Label1
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Device_Obj_Alias}@BrowseName"
+        - Name: Device_Obj_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_201"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: Device_Status
+          Type: BaseDataVariableType
+          DataType: Int32
+          Children:
+          - Name: DeviceStatus1
+            Type: DeviceStatus
+            Children:
+            - Name: Sourcecmd_MAINT_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_MAINT_MODE"
+            - Name: Sourcests_ALARM
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_ALARM"
+            - Name: Sourcests_STOPLATCH
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_STOPLATCH"
+            - Name: Sourcests_RUNNING_HAND
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_HAND"
+            - Name: Sourcests_RUNNING_AUTO
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Sourcecmd_OFF_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_OFF_MODE"
+      - Name: Device_Obj2
+        Type: Device_Obj
+        Children:
+        - Name: BG
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DeviceStatusColor1
+              Type: DeviceStatusColor
+              Children:
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#d3d3d3"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff34b0"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#18ff13"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ffff00"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair7
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 7
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair8
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 8
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair9
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 9
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair10
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 10
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair11
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 11
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Device_Status"
+              - Name: System_Application_Blink
+                Type: Alias
+                DataType: NodeId
+                Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Objects/DeviceState_wConverter/System/System/Application"
+        - Name: Label1
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Device_Obj_Alias}@BrowseName"
+        - Name: Device_Obj_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_202"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: Device_Status
+          Type: BaseDataVariableType
+          DataType: Int32
+          Children:
+          - Name: DeviceStatus1
+            Type: DeviceStatus
+            Children:
+            - Name: Sourcecmd_MAINT_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_MAINT_MODE"
+            - Name: Sourcests_ALARM
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_ALARM"
+            - Name: Sourcests_STOPLATCH
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_STOPLATCH"
+            - Name: Sourcests_RUNNING_HAND
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_HAND"
+            - Name: Sourcests_RUNNING_AUTO
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Sourcecmd_OFF_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_OFF_MODE"
+      - Name: Device_Obj3
+        Type: Device_Obj
+        Children:
+        - Name: BG
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DeviceStatusColor1
+              Type: DeviceStatusColor
+              Children:
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#d3d3d3"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff34b0"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#18ff13"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ffff00"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair7
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 7
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair8
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 8
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair9
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 9
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair10
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 10
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair11
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 11
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Device_Status"
+              - Name: System_Application_Blink
+                Type: Alias
+                DataType: NodeId
+                Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Objects/DeviceState_wConverter/System/System/Application"
+        - Name: Label1
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Device_Obj_Alias}@BrowseName"
+        - Name: Device_Obj_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_203"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: Device_Status
+          Type: BaseDataVariableType
+          DataType: Int32
+          Children:
+          - Name: DeviceStatus1
+            Type: DeviceStatus
+            Children:
+            - Name: Sourcecmd_MAINT_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_MAINT_MODE"
+            - Name: Sourcests_ALARM
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_ALARM"
+            - Name: Sourcests_STOPLATCH
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_STOPLATCH"
+            - Name: Sourcests_RUNNING_HAND
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_HAND"
+            - Name: Sourcests_RUNNING_AUTO
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Sourcecmd_OFF_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_OFF_MODE"
+      - Name: Device_Obj4
+        Type: Device_Obj
+        Children:
+        - Name: BG
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DeviceStatusColor1
+              Type: DeviceStatusColor
+              Children:
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#d3d3d3"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff34b0"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#18ff13"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ffff00"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair7
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 7
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair8
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 8
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair9
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 9
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair10
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 10
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair11
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 11
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Device_Status"
+              - Name: System_Application_Blink
+                Type: Alias
+                DataType: NodeId
+                Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Objects/DeviceState_wConverter/System/System/Application"
+        - Name: Label1
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Device_Obj_Alias}@BrowseName"
+        - Name: Device_Obj_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_301"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: Device_Status
+          Type: BaseDataVariableType
+          DataType: Int32
+          Children:
+          - Name: DeviceStatus1
+            Type: DeviceStatus
+            Children:
+            - Name: Sourcecmd_MAINT_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_MAINT_MODE"
+            - Name: Sourcests_ALARM
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_ALARM"
+            - Name: Sourcests_STOPLATCH
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_STOPLATCH"
+            - Name: Sourcests_RUNNING_HAND
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_HAND"
+            - Name: Sourcests_RUNNING_AUTO
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Sourcecmd_OFF_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_OFF_MODE"
+      - Name: Device_Obj5
+        Type: Device_Obj
+        Children:
+        - Name: BG
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DeviceStatusColor1
+              Type: DeviceStatusColor
+              Children:
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#d3d3d3"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair2
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff34b0"
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#18ff13"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ffff00"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair7
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 7
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair8
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 8
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair9
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 9
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair10
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 10
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+                - Name: Pair11
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Value: 11
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: ConditionalConverter1
+                      Type: ConditionalConverter
+                      Children:
+                      - Name: Condition
+                        Type: BaseDataVariableType
+                        DataType: Boolean
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{System_Application_Blink}"
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Device_Status"
+              - Name: System_Application_Blink
+                Type: Alias
+                DataType: NodeId
+                Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Objects/DeviceState_wConverter/System/System/Application"
+        - Name: Label1
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Device_Obj_Alias}@BrowseName"
+        - Name: Device_Obj_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_501"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: Device_Status
+          Type: BaseDataVariableType
+          DataType: Int32
+          Children:
+          - Name: DeviceStatus1
+            Type: DeviceStatus
+            Children:
+            - Name: Sourcecmd_MAINT_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_MAINT_MODE"
+            - Name: Sourcests_ALARM
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_ALARM"
+            - Name: Sourcests_STOPLATCH
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/A/sts_STOPLATCH"
+            - Name: Sourcests_RUNNING_HAND
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_HAND"
+            - Name: Sourcests_RUNNING_AUTO
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Sourcecmd_OFF_MODE
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Obj_Alias}/M/cmd_OFF_MODE"
+    - Name: VerticalLayout2
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Label1
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Simulation"}
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TextHorizontalAlignment
+          Type: BaseVariableType
+          DataType: TextHorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: TextVerticalAlignment
+          Type: BaseVariableType
+          DataType: TextVerticalAlignment
+          ModellingRule: Optional
+          Value: 1
+      - Name: Device_Ctrl1
+        Type: Device_Ctrl
+        Children:
+        - Name: VerticalLayout1
+          Type: ColumnLayout
+          Children:
+          - Name: Label1
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Ctrl_Alias}@BrowseName"
+          - Name: HorizontalLayout1
+            Type: RowLayout
+            Children:
+            - Name: Switch1
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_MAINT_MODE"
+            - Name: Switch2
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_ALARM"
+            - Name: Switch3
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_STOPLATCH"
+            - Name: Switch4
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_HAND"
+            - Name: Switch5
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Switch6
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_OFF_MODE"
+          - Name: HorizontalLayout2
+            Type: RowLayout
+            Children:
+            - Name: Label1
+              Type: Label
+            - Name: Label2
+              Type: Label
+            - Name: Label3
+              Type: Label
+            - Name: Label4
+              Type: Label
+            - Name: Label5
+              Type: Label
+            - Name: Label6
+              Type: Label
+        - Name: Device_Ctrl_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_201"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+      - Name: Device_Ctrl2
+        Type: Device_Ctrl
+        Children:
+        - Name: VerticalLayout1
+          Type: ColumnLayout
+          Children:
+          - Name: Label1
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Ctrl_Alias}@BrowseName"
+          - Name: HorizontalLayout1
+            Type: RowLayout
+            Children:
+            - Name: Switch1
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_MAINT_MODE"
+            - Name: Switch2
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_ALARM"
+            - Name: Switch3
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_STOPLATCH"
+            - Name: Switch4
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_HAND"
+            - Name: Switch5
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Switch6
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_OFF_MODE"
+          - Name: HorizontalLayout2
+            Type: RowLayout
+            Children:
+            - Name: Label1
+              Type: Label
+            - Name: Label2
+              Type: Label
+            - Name: Label3
+              Type: Label
+            - Name: Label4
+              Type: Label
+            - Name: Label5
+              Type: Label
+            - Name: Label6
+              Type: Label
+        - Name: Device_Ctrl_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_202"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+      - Name: Device_Ctrl3
+        Type: Device_Ctrl
+        Children:
+        - Name: VerticalLayout1
+          Type: ColumnLayout
+          Children:
+          - Name: Label1
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Ctrl_Alias}@BrowseName"
+          - Name: HorizontalLayout1
+            Type: RowLayout
+            Children:
+            - Name: Switch1
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_MAINT_MODE"
+            - Name: Switch2
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_ALARM"
+            - Name: Switch3
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_STOPLATCH"
+            - Name: Switch4
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_HAND"
+            - Name: Switch5
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Switch6
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_OFF_MODE"
+          - Name: HorizontalLayout2
+            Type: RowLayout
+            Children:
+            - Name: Label1
+              Type: Label
+            - Name: Label2
+              Type: Label
+            - Name: Label3
+              Type: Label
+            - Name: Label4
+              Type: Label
+            - Name: Label5
+              Type: Label
+            - Name: Label6
+              Type: Label
+        - Name: Device_Ctrl_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_203"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+      - Name: Device_Ctrl4
+        Type: Device_Ctrl
+        Children:
+        - Name: VerticalLayout1
+          Type: ColumnLayout
+          Children:
+          - Name: Label1
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Device_Ctrl_Alias}@BrowseName"
+          - Name: HorizontalLayout1
+            Type: RowLayout
+            Children:
+            - Name: Switch1
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_MAINT_MODE"
+            - Name: Switch2
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_ALARM"
+            - Name: Switch3
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/A/sts_STOPLATCH"
+            - Name: Switch4
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_HAND"
+            - Name: Switch5
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/sts_RUNNING_AUTO"
+            - Name: Switch6
+              Type: Switch
+              Children:
+              - Name: Checked
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Device_Ctrl_Alias}/M/cmd_OFF_MODE"
+          - Name: HorizontalLayout2
+            Type: RowLayout
+            Children:
+            - Name: Label1
+              Type: Label
+            - Name: Label2
+              Type: Label
+            - Name: Label3
+              Type: Label
+            - Name: Label4
+              Type: Label
+            - Name: Label5
+              Type: Label
+            - Name: Label6
+              Type: Label
+        - Name: Device_Ctrl_Alias
+          Type: Alias
+          DataType: NodeId
+          Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Device_301"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Objects/DeviceState_wConverter/CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Types/VariableTypes/UDT_Device"
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+      - Name: ContentAlignment
+        Type: BaseVariableType
+        DataType: ContentVerticalAlignment
+        ModellingRule: Optional
+- File: Screens/Screens.yaml
+- File: Widgets/Widgets.yaml

@@ -1,0 +1,56 @@
+Project:
+ Name: DeviceState_wConverter
+ GUID: 91bd3586f3bef5d215c96550558bbf0e
+ ProjectNamespaceIndex: 10
+ Description: ''
+ Company: ''
+ Copyright: ''
+ FormatVersion: 1
+ ProductVersion: 1.4
+ CoreVersion: 3.0
+ Dependencies:
+  2:
+   Uri: 'urn:FTOptix:CoreBase'
+   Module: FTOptix.CoreBase
+   Version: 4.0
+  3:
+   Uri: 'urn:FTOptix:UI'
+   Module: FTOptix.UI
+   Version: 12.4
+  4:
+   Uri: 'urn:FTOptix:Retentivity'
+   Module: FTOptix.Retentivity
+   Version: 1.0
+  5:
+   Uri: 'urn:FTOptix:System'
+   Module: FTOptix.System
+   Version: 3.0
+  6:
+   Uri: 'urn:FTOptix:CommunicationDriver'
+   Module: FTOptix.CommunicationDriver
+   Version: 2.1
+  7:
+   Uri: 'urn:FTOptix:HMIProject'
+   Module: FTOptix.HMIProject
+   Version: 6.1
+  8:
+   Uri: 'urn:FTOptix:NativeUI'
+   Module: FTOptix.NativeUI
+   Version: 2.0
+  9:
+   Uri: 'urn:FTOptix:RAEtherNetIP'
+   Module: FTOptix.RAEtherNetIP
+   Version: 3.0
+ Statistics:
+  TotalNodeCount: 1452
+  Objects: 349
+  ObjectTypes: 5
+  Variables: 1092
+  VariableTypes: 3
+  DataTypes: 3
+  Methods: 0
+  References: 8
+  ReferenceTypes: 0
+  Files: 27
+ Nodes:
+ - File: Nodes/DeviceState_wConverter.yaml

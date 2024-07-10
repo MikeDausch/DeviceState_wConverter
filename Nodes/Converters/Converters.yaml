@@ -1,0 +1,409 @@
+Name: Converters
+Type: ConvertersCategoryFolder
+Children:
+- Name: DeviceStatusColor
+  Id: g=8ba4665b1062d998b0fa747419e047c2
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: ns=2;Pairs
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#d3d3d3"
+    - Name: Pair1
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#d3d3d3"
+    - Name: Pair2
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff34b0"
+    - Name: Pair3
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ff34b0"
+    - Name: Pair4
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#18ff13"
+    - Name: Pair5
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffff00"
+    - Name: Pair6
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#18ff13"
+    - Name: Pair7
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ffff00"
+    - Name: Pair8
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 8
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ffa500"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#d3d3d3"
+    - Name: Pair9
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ffa500"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+    - Name: Pair10
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ff0000"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#d3d3d3"
+    - Name: Pair11
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 11
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{System_Application_Blink}"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ff0000"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#19ffff"
+  - Name: Mode
+    Type: PropertyType
+    DataType: DynamicLinkMode
+    ReferenceType: HasComponent
+    ModellingRule: Optional
+    Value: 2
+  - Name: System_Application_Blink
+    Type: Alias
+    DataType: NodeId
+    Description: {"LocaleId":"en-US","Text":"Choose Fast Medium or Slow Blink from System-Application"}
+    Value: "/Objects/DeviceState_wConverter/System/System/Application/FastBlink"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/DeviceState_wConverter/System/System/Application"
+- Name: DeviceStatus
+  Id: g=df8a9b47be6369305096159d7d640ed3
+  Supertype: ExpressionEvaluator
+  ReferenceType: HasComponent
+  Children:
+  - Name: Expression
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasParameter
+    ModellingRule: Optional
+    Value: "if ({#cmd_MAINT_MODE}&&{#sts_ALARM},11,\nif ({#sts_ALARM},10,\nif ({#cmd_MAINT_MODE}&&{#sts_STOPLATCH},9, \nif ({#sts_STOPLATCH},8, \nif ({#cmd_MAINT_MODE}&&{#sts_RUNNING_HAND},7,\nif ({#cmd_MAINT_MODE}&&{#sts_RUNNING_AUTO},6,\nif ({#cmd_MAINT_MODE}==0&&{#sts_RUNNING_HAND},5,\nif ({#cmd_MAINT_MODE}==0&&{#sts_RUNNING_AUTO},4,\nif ({#cmd_MAINT_MODE}&&{#cmd_OFF_MODE},3,\nif ({#cmd_MAINT_MODE}==0&&{#cmd_OFF_MODE},2,\nif ({#cmd_MAINT_MODE},1,0)))))))))))"
+  - Name: ns=2;Sourcecmd_MAINT_MODE
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+  - Name: ns=2;Sourcests_ALARM
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+  - Name: ns=2;Sourcests_STOPLATCH
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+  - Name: ns=2;Sourcests_RUNNING_HAND
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+  - Name: ns=2;Sourcests_RUNNING_AUTO
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+  - Name: ns=2;Sourcecmd_OFF_MODE
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
